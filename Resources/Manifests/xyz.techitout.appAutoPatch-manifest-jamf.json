@@ -6,6 +6,18 @@
             "type": "string",
             "title": "Days Until Reset",
             "description": "The number of days after the patching cadence start date (Zero Date) that the patching complete status will reset from TRUE to FALSE",
+            "default": 7,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "7"
+                        }
+                    },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#daysuntilreset"
+                }
+            ],
             "property_order": 5
         },
         "PatchWeekStartDay": {
@@ -13,13 +25,13 @@
             "title": "Patch Week Start Day",
             "description": "The day of the week to force the patching cadence start date (Zero Date) to go back to in order to have the patch cadence start the same day of the week for all users",
             "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
             ],
             "options": {
                 "enum_titles": [
@@ -32,16 +44,28 @@
                     "Sunday - 7"
                 ]
             },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#patchweekstartday"
+                }
+            ],
             "property_order": 10
         },
         "DeadlineCountFocus": {
             "type": "string",
             "title": "Focus Count Deadline",
             "description": "The maximum number of automatic deferrals allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep",
+            "default": 3,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "3"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings#deadlinecountfocus"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deadlinecountfocus"
                 }
             ],
             "property_order": 15
@@ -50,10 +74,16 @@
             "type": "string",
             "title": "Hard Count Deadline",
             "description": "The maximum number of user selected deferrals allowed before App Auto-Patch will no longer allow deferrals and will automatically patch when the timer expires",
+            "default": 3,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "3"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings#deadlinecounthard"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deadlinecounthard"
                 }
             ],
             "property_order": 20
@@ -65,7 +95,7 @@
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Days-Deadlines"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Days-Deadlines"
                 }
             ],
             "property_order": 25
@@ -77,7 +107,7 @@
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Days-Deadlines"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Days-Deadlines"
                 }
             ],
             "property_order": 30
@@ -86,10 +116,16 @@
             "type": "string",
             "title": "Deferral Timer Default",
             "description": "The number of minutes to defer until the next update workflow attempt if a user choses not install updates",
+            "default": 1440,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "1440"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings#deferraltimerdefault"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimerdefault"
                 }
             ],
             "property_order": 35
@@ -98,10 +134,16 @@
             "type": "string",
             "title": "Deferral Timer Error",
             "description": "The number of minutes to defer if AAP detects an error in the workflow",
+            "default": 60,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "60"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings#deferraltimererror"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimererror"
                 }
             ],
             "property_order": 40
@@ -110,10 +152,16 @@
             "type": "string",
             "title": "Deferral Timer Focus",
             "description": "The number of minutes to defer the update restart dialog automatically if a process has prevented display sleep (for example, during an active meeting) or the user has Focus or Do Not Disturb enabled",
+            "default": 60,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "60"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings#deferraltimerfocus"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimerfocus"
                 }
             ],
             "property_order": 45
@@ -122,10 +170,16 @@
             "type": "string",
             "title": "Deferral Timer Menu",
             "description": "Display a deferral time pop-up menu in the non-deadline install dialog that allows the user to override the Deferral Timer Default timer",
+            "default": "30,60,90,480,720,1440,2880",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "30,60,90,480,720,1440,2880"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings#deferraltimermenu"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimermenu"
                 }
             ],
             "property_order": 50
@@ -134,10 +188,16 @@
             "type": "string",
             "title": "Deferral Timer Workflow Relaunch",
             "description": "Amount of time in minutes until AAP is relaunched after a workflow. This timer results in AAP acting as a permanent agent that checks for app updates on a regular basis",
+            "default": 1440,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "1440"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings#deferraltimerworkflowrelaunch"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#deferraltimerworkflowrelaunch"
                 }
             ],
             "property_order": 55
@@ -156,16 +216,28 @@
                     "FALSE"
                 ]
             },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogontop"
+                }
+            ],
             "property_order": 60
         },
         "DialogTimeoutDeferral": {
             "type": "string",
             "title": "Deferral Dialog Timeout",
             "description": "Time given to the user to respond to deferral prompt if enabled",
+            "default": 300,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "300"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogtimeoutdeferral"
                 }
             ],
             "property_order": 65
@@ -184,6 +256,12 @@
                     "Continue"
                 ]
             },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#dialogtimeoutdeferralaction"
+                }
+            ],
             "property_order": 70
         },
         "UnattendedExit": {
@@ -200,16 +278,28 @@
                     "FALSE"
                 ]
             },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#unattendedexit"
+                }
+            ],
             "property_order": 75
         },
         "UnattendedExitSeconds": {
             "type": "integer",
             "title": "Unattended Exit Seconds",
             "description": "The number of seconds the AAP dialog will automatically close if UnattendedExit is set to TRUE",
+            "default": 60,
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "60"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#unattendedexitseconds"
                 }
             ],
             "property_order": 80
@@ -228,16 +318,28 @@
                     "FALSE"
                 ]
             },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#useoverlayicon"
+                }
+            ],
             "property_order": 85
         },
         "IgnoredLabels": {
             "type": "string",
             "title": "Ignored Labels",
             "description": "A space-separated list of Installomator labels to ignore for the AAP workflow. Supports wilddcards",
+            "default": "microsoft* googlechrome*",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "microsoft* googlechrome*"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#ignoredlabels"
                 }
             ],
             "property_order": 90
@@ -246,10 +348,16 @@
             "type": "string",
             "title": "Required Labels",
             "description": "a space-separated list of Installomator labels that are required, regardless if the app is installed or or the latest version. Supports wildcards.",
+            "default": "desktoppr dockutil nudgesuite",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "desktoppr dockutil nudgesuite"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#requiredlabels"
                 }
             ],
             "property_order": 95
@@ -257,11 +365,17 @@
         "OptionalLabels": {
             "type": "string",
             "title": "Optional Labels",
-            "description": "A space-separated list of optional Installomator labels. Labels in this category are only included if the app exists on the end-users device and will force install even if its the latest version. Does Not Support Wildcards",
+            "description": "A space-separated list of optional Installomator labels. Labels in this category are only included if the app exists on the end-users device and will force install even if its the latest version. **Does not** support wildcards!",
+            "default": "1password8 adobereaderdc amazonchime apparency firefoxpkg vlc zoom",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "1password8 adobereaderdc amazonchime apparency firefoxpkg vlc zoom"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#optionallabels"
                 }
             ],
             "property_order": 100
@@ -269,12 +383,17 @@
         "AppTitle": {
             "type": "string",
             "title": "App Title",
-            "default": "App Auto-Patch",
             "description": "Allows you to customize the name of App Auto-Patch to something else",
+            "default": "App Auto-Patch",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "App Auto-Patch"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#apptitle"
                 }
             ],
             "property_order": 105
@@ -294,6 +413,12 @@
                     "FALSE"
                 ]
             },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#convertappsinhomefolder"
+                }
+            ],
             "property_order": 110
         },
         "IgnoreAppsInHomeFolder": {
@@ -311,19 +436,48 @@
                     "FALSE"
                 ]
             },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#ignoreappsinhomefolder"
+                }
+            ],
             "property_order": 115
         },
         "InstallomatorOptions": {
             "type": "string",
             "title": "Installomator Options",
-            "description": "A space-separated list of options to override default Installomator options (i.e., BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=appstore)",
+            "description": "A space-separated list of options to override default Installomator options (i.e., BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=jamf)",
+            "default": "BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=jamf",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=jamf"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#installomatoroptions"
                 }
             ],
             "property_order": 120
+        },
+        "InstallomatorUpdateDisable": {
+            "type": "string",
+            "title": "Installomator Update Disable",
+            "default": "FALSE",
+            "description": "This will prevent Installomator from automatically updating. If Installomator does not exist in the working folder, it will still download from GitHub to prevent script failure",
+            "enum": [
+                "TRUE",
+                "FALSE"
+            ],
+            "options": {
+                "enum_titles": [
+                    "TRUE",
+                    "FALSE"
+                ]
+            },
+            "property_order": 125
         },
         "InstallomatorVersion": {
             "type": "string",
@@ -332,15 +486,59 @@
             "description": "Determines if the AAP script should use the Main (beta) or Release version of Installomator. The version from the Main branch typically includes more recent updates from PR's to fix issues or add new labels.",
             "enum": [
                 "Main",
-                "Release"
+                "Release",
+                "Custom"
             ],
             "options": {
                 "enum_titles": [
                     "Main",
-                    "Release"
+                    "Release",
+                    "Custom"
                 ]
             },
-            "property_order": 125
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#installomator-versions"
+                }
+            ],
+            "property_order": 130
+        },
+        "InstallomatorVersionCustomRepoPath": {
+            "type": "string",
+            "title": "Installomator Version Custom Repo Path",
+            "default": "Main",
+            "description": "If InstallomatorVersion is set to Custom, enter the Github Site and Repository name in the following format: site_name/repo_name . For example, if the custom fork is located at https://github.com/TechTrekkie/Installomator, you would set this key to techtrekkie/installomator",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "Installomator/Installomator"
+                        }
+                    },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#custom-installomator-repo"
+                }
+            ],
+            "property_order": 135
+        },
+        "InstallomatorVersionCustomBranchName": {
+            "type": "string",
+            "title": "Installomator Version Custom Branch Name",
+            "default": "Main",
+            "description": "The name of the branch you want to use in your custom repo, typically main.",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "main"
+                        }
+                    },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Installomator-Integration#custom-installomator-repo"
+                }
+            ],
+            "property_order": 140
         },
         "InteractiveMode": {
             "type": "integer",
@@ -357,9 +555,18 @@
                     "0 - Completely Silent",
                     "1 - Silent Discovery, Interactive Patching",
                     "2 - Full Interactive"
-                ]
-            },
-            "property_order": 130
+                ],
+                "inputAttributes": {
+                    "placeholder": "2"
+                        }
+                    },
+                "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#interactivemode"
+                }
+            ],
+            "property_order": 145
         },
         "RemoveInstallomatorPath": {
             "type": "string",
@@ -376,55 +583,85 @@
                     "FALSE"
                 ]
             },
-            "property_order": 135
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#removeinstallomatorpath"
+                }
+            ],
+            "property_order": 150
         },
         "SupportTeamName": {
             "type": "string",
             "title": "Support Team Name",
             "description": "For the Support Team details that display in the Help Message",
+            "default": "Company IT Support",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "Company IT Support"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#supportteamname"
                 }
             ],
-            "property_order": 140
+            "property_order": 155
         },
         "SupportTeamEmail": {
             "type": "string",
             "title": "Support Team Email",
             "description": "For the Support Team details that display in the Help Message",
+            "default": "support@company.com",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "support@company.com"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#supportteamemail"
                 }
             ],
-            "property_order": 145
+            "property_order": 160
         },
         "SupportTeamPhone": {
             "type": "string",
             "title": "Support Team Phone",
             "description": "For the Support Team details that display in the Help Message",
+            "default": "(555) 867-5309",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "(555) 867-5309"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#supportteamphone"
                 }
             ],
-            "property_order": 150
+            "property_order": 165
         },
         "SupportTeamWebsite": {
             "type": "string",
             "title": "Support Team Website",
             "description": "For the Support Team details that display in the Help Message",
+            "default": "support.company.com",
+            "options": {
+                "inputAttributes": {
+                    "placeholder": "support.company.com"
+                        }
+                    },
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#supportteamwebsite"
                 }
             ],
-            "property_order": 155
+            "property_order": 170
         },
         "WebhookFeature": {
             "type": "string",
@@ -443,7 +680,13 @@
                     "FAILURES"
                 ]
             },
-            "property_order": 160
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#webhookfeature"
+                }
+            ],
+            "property_order": 175
         },
         "WebhookURLSlack": {
             "type": "string",
@@ -452,10 +695,10 @@
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#webhookurlslack"
                 }
             ],
-            "property_order": 165
+            "property_order": 180
         },
         "WebhookURLTeams": {
             "type": "string",
@@ -464,36 +707,68 @@
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://support.microsoft.com/en-us/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498"
                 }
             ],
-            "property_order": 170
+            "property_order": 185
         },
         "WorkflowDisableAppDiscovery": {
-            "type": "boolean",
+            "type": "string",
             "title": "Disable App Discovery Workflow",
-            "default": false,
+            "default": "FALSE",
             "description": "Disables the discovery of applications that require patching. If a list of labels from a previous discovery exists, AAP will use that list for the workflow",
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings"
                 }
             ],
-            "property_order": 175
+            "enum": [
+                "TRUE",
+                "FALSE"
+            ],
+            "options": {
+                "enum_titles": [
+                    "TRUE",
+                    "FALSE"
+                ]
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#workflowdisableappdiscovery"
+                }
+            ],
+            "property_order": 190
         },
         "WorkflowDisableRelaunch": {
-            "type": "boolean",
+            "type": "string",
             "title": "Disable Relaunch Workflow",
-            "default": false,
+            "default": "FALSE",
             "description": "Disable the automatic relaunch of AAP after the current workflow successfully completes",
             "links": [
                 {
                     "rel": "More information",
-                    "href": "https://github.com/App-Auto-Patch/AAP3-Wiki/wiki/Configure-Settings"
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings"
                 }
             ],
-            "property_order": 180
+            "enum": [
+                "TRUE",
+                "FALSE"
+            ],
+            "options": {
+                "enum_titles": [
+                    "TRUE",
+                    "FALSE"
+                ]
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings"
+                }
+            ],
+            "property_order": 195
         },
         "WorkflowInstallNowPatchingStatusAction": {
             "type": "string",
@@ -512,7 +787,538 @@
                     "SUCCESS"
                 ]
             },
-            "property_order": 185
+            "property_order": 200
+        },
+        "userInterface": {
+            "type": "object",
+            "title": "User Interface",
+            "description": "All features related to how App Auto Patch defines the user interface.",
+            "properties": {
+                "dialogElements": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "title": "dialogElements - Dictionary",
+                        "properties": {
+                            "language": {
+                                "type": "string",
+                                "title": "Language",
+                                "description": "The targeted language locale for the user interface. Note: For a list of locales, please run the following command in Terminal: /usr/bin/locale -a",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_defer_today_button": {
+                                "type": "string",
+                                "title": "Defer Today Button",
+                                "description": "Language for the defer button in dialogs when the deferral time is sometime today.",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_defer_tomorrow_button": {
+                                "type": "string",
+                                "title": "Defer Tomorrow Button",
+                                "description": "Language for the defer button in dialogs when the deferral time is tomorrow",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_defer_future_button": {
+                                "type": "string",
+                                "title": "Defer Future Button",
+                                "description": "Language for the defer button in dialogs when the deferral time is in the future.",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_minutes": {
+                                "type": "string",
+                                "title": "Minutes Display String",
+                                "description": "Language for deferral timer durations - Minutes",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_hour": {
+                                "type": "string",
+                                "title": "Hour Display String",
+                                "description": "Language for deferral timer durations - Hour",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_hours": {
+                                "type": "string",
+                                "title": "Hours Display String",
+                                "description": "Language for deferral timer durations - Hours",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_and": {
+                                "type": "string",
+                                "title": "and Display String",
+                                "description": "Language for deferral timer durations - and",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_days": {
+                                "type": "string",
+                                "title": "days Display String",
+                                "description": "Language for deferral timer durations - days",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_times": {
+                                "type": "string",
+                                "title": "times Display String",
+                                "description": "Language for deferral timer durations - times",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_there_are": {
+                                "type": "string",
+                                "title": "There are Display String",
+                                "description": "Language for deferral timer durations - There are",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_discovery_message": {
+                                "type": "string",
+                                "title": "Discovery Message",
+                                "description": "Language for the message displayed during App Discovery",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_discovery_action_message": {
+                                "type": "string",
+                                "title": "Discovery action message",
+                                "description": "Language for the action message during App Discovery",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_discovery_progress": {
+                                "type": "string",
+                                "title": "Discovery progress message",
+                                "description": "Langauge for the progress message during App Discovery",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_button1": {
+                                "type": "string",
+                                "title": "Deferral Dialog Button1",
+                                "description": "Language for Button1 of the Deferral Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_button2": {
+                                "type": "string",
+                                "title": "Deferral Dialog Button2",
+                                "description": "Language for Button1 of the Deferral Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_infobox1": {
+                                "type": "string",
+                                "title": "Deferral Dialog Infobox part1",
+                                "description": "Langauge for part 1 of the infobox on the Deferral Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_infobox2": {
+                                "type": "string",
+                                "title": "Deferral Dialog Infobox part2",
+                                "description": "Langauge for part 2 of the infobox on the Deferral Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_infobox3": {
+                                "type": "string",
+                                "title": "Deferral Dialog Infobox part3",
+                                "description": "Langauge for part 3 of the infobox on the Deferral Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_message_01": {
+                                "type": "string",
+                                "title": "Deferral Dialog Message part 1",
+                                "description": "Langauge for part 1 of the message on the Deferral Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_message_02": {
+                                "type": "string",
+                                "title": "Deferral Dialog Message part 2",
+                                "description": "Language for part 2 of the message on the Deferral Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferral_unlimited": {
+                                "type": "string",
+                                "title": "Deferral Dialog Unlimited Deferrals",
+                                "description": "Langauge for unlimited deferrals",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferraldeadline_button1": {
+                                "type": "string",
+                                "title": "Deadline Dialog Button 1",
+                                "description": "Deferral Deadline Dialog button1",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferraldeadline_button2": {
+                                "type": "string",
+                                "title": "Deadline Dialog Button 2",
+                                "description": "Deferral Deadline Dialog button2",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferraldeadline_infobox": {
+                                "type": "string",
+                                "title": "Deadline Dialog infobox",
+                                "description": "Deferral Deadline Dialog infbox",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_deferraldeadline_message_deadline": {
+                                "type": "string",
+                                "title": "Deadline Dialog Message",
+                                "description": "Deferral Deadline Dialog Message",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_patching_button1": {
+                                "type": "string",
+                                "title": "Patching Dialog Button 1",
+                                "description": "Patching Dialog button1",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_patching_checking": {
+                                "type": "string",
+                                "title": "Patching Dialog Checking",
+                                "description": "Patching Dialog Checking",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_patching_progress": {
+                                "type": "string",
+                                "title": "Patching Dialog Progress",
+                                "description": "Patching Dialog Progress",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_patching_infobox_computer_name": {
+                                "type": "string",
+                                "title": "Patching Dialog Infobox Computer Name",
+                                "description": "Patching Dialog Infobox Computer Name",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_patching_infobox_macos_version": {
+                                "type": "string",
+                                "title": "Patching Dialog Infobox macOS Version",
+                                "description": "Patching Dialog Infobox macOS Version",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_patching_infobox_updates": {
+                                "type": "string",
+                                "title": "Patching Dialog infobox updates",
+                                "description": "Patching Dialog infobox updates",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_patching_message": {
+                                "type": "string",
+                                "title": "Patching Dialog Message",
+                                "description": "Patching Dialog Message",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_complete_progress": {
+                                "type": "string",
+                                "title": "Patching Complete Progress Message",
+                                "description": "Patching Complete Progress Message",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_uptodate_button1": {
+                                "type": "string",
+                                "title": "All Apps Up To Date Button 1",
+                                "description": "All Apps Up To Date Button 1",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_uptodate_message": {
+                                "type": "string",
+                                "title": "All Apps Up To Date Message",
+                                "description": "All Apps Up To Date Message",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_intro": {
+                                "type": "string",
+                                "title": "Help Message - Intro",
+                                "description": "Help Message - Intro",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_telephone": {
+                                "type": "string",
+                                "title": "Help Message - Telephone",
+                                "description": "Help Message - Telephone",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_email": {
+                                "type": "string",
+                                "title": "Help Message - Email",
+                                "description": "Help Message - Email",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_help_website": {
+                                "type": "string",
+                                "title": "Help Message - Help Website",
+                                "description": "Help Message - Help Website",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_computer_info": {
+                                "type": "string",
+                                "title": "Help Message - Computer Info",
+                                "description": "Help Message - Computer Info",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_operating_system": {
+                                "type": "string",
+                                "title": "Help Message - Operating System",
+                                "description": "Help Message - Operating System",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_serial": {
+                                "type": "string",
+                                "title": "Help Message - Serial Number",
+                                "description": "Help Message - Serial Number",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_dialog": {
+                                "type": "string",
+                                "title": "Help Message - Dialog",
+                                "description": "Help Message - Dialog",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_started": {
+                                "type": "string",
+                                "title": "Help Message - Started",
+                                "description": "Help Message - Started",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            },
+                            "display_string_help_message_script_version": {
+                                "type": "string",
+                                "title": "Help Message - Script Version",
+                                "description": "Help Message - Script Version",
+                                "links": [
+                                    {
+                                        "rel": "More information",
+                                        "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "title": "Dialog Elements",
+                    "description": "The individual buttons and text elements that can be customized. This includes per country localization.",
+                    "links": [
+                        {
+                            "rel": "More information",
+                            "href": "https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/"
+                        }
+                    ]
+                }
+            },
+            "property_order": 205
         }
     }
 }
